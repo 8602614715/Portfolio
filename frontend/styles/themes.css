@@ -1,0 +1,120 @@
+/* Refined command-center theme: quieter surfaces, clearer hierarchy, and a warmer signal color. */
+:root {
+  --background: oklch(0.06 0.012 155);
+  --foreground: oklch(0.94 0.018 145);
+  --border: oklch(0.24 0.03 150);
+  --ring: oklch(0.84 0.17 125);
+  --muted-foreground: oklch(0.62 0.03 150);
+  --accent-lime: #d2f878;
+  --accent-soft: #89b99a;
+  --panel: #0b1310;
+}
+
+.portfolio-shell {
+  background: #050806;
+  background-image: radial-gradient(circle at 50% 0%, rgba(116, 197, 170, .055), transparent 34%);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+.portfolio-inner { width: min(100% - 64px, 1440px); }
+.site-header { min-height: 82px; border-bottom-color: rgba(210, 248, 120, .15); }
+.wordmark, .desktop-nav, .header-actions, .status-indicator, .eyebrow, .section-kicker, .strip-label,
+.terminal-window, .system-status, .about-terminal, .skill-card, .project-card, .tools-panel, .resume-terminal,
+.contact-form, .boot-overlay, .portfolio-footer { font-family: var(--font-geist-mono), ui-monospace, monospace; }
+.desktop-nav a, .header-actions a, .theme-toggle { color: #84978b; }
+.desktop-nav a:hover, .desktop-nav .active, .header-actions a:hover, .theme-toggle:hover { color: var(--accent-lime); }
+.hero-section { min-height: 610px; padding: 86px 0 66px; }
+.eyebrow, .section-kicker, .strip-label { color: #86b49a; letter-spacing: .16em; }
+h1 { font-family: var(--font-geist-sans), Arial, sans-serif; font-weight: 760; letter-spacing: -.105em; text-shadow: 0 0 36px rgba(210, 248, 120, .09); }
+.hero-description { color: #aebbb0; }
+.button { border-radius: 2px; font-weight: 600; letter-spacing: .1em; }
+.button-primary { background: var(--accent-lime); border-color: var(--accent-lime); box-shadow: 0 0 22px rgba(210, 248, 120, .08); }
+.button-primary:hover { background: #efffb7; box-shadow: 0 0 28px rgba(210, 248, 120, .18); }
+.button-ghost { border-color: #34493c; background: rgba(11, 20, 14, .5); }
+.terminal-window, .system-status, .about-terminal, .skill-card, .project-card, .tools-panel, .resume-terminal, .contact-form { background: rgba(9, 17, 13, .78); border-color: rgba(176, 226, 157, .2); }
+.terminal-window, .resume-terminal { box-shadow: 0 22px 70px rgba(0, 0, 0, .25), 0 0 28px rgba(85, 219, 170, .06); }
+.terminal-header, .system-status-heading, .resume-top { border-bottom-color: rgba(176, 226, 157, .16); }
+.tech-strip, .section-heading-row, .portfolio-footer { border-color: rgba(176, 226, 157, .15); }
+.content-section { padding-top: 96px; }
+.section-heading-row h2 { font-family: var(--font-geist-mono), monospace; font-weight: 650; }
+.about-intro p, .project-card h3, .timeline-content h3, .education-card h3, .contact-section h2 { font-family: var(--font-geist-sans), Arial, sans-serif; }
+.about-intro p { color: #dbe8dc; }
+.skill-card:hover, .project-card:hover { border-color: rgba(210, 248, 120, .52); background: rgba(13, 26, 17, .88); box-shadow: 0 16px 34px rgba(0, 0, 0, .16); }
+.project-primary { box-shadow: inset 3px 0 0 var(--accent-lime), inset 0 0 42px rgba(210, 248, 120, .025); }
+.project-tech span, .education-tags span { border-color: rgba(210, 248, 120, .24); background: rgba(210, 248, 120, .035); }
+.contact-section { padding-top: 120px; }
+.contact-form input, .contact-form textarea { background: #07100b; border-color: rgba(176, 226, 157, .2); border-radius: 2px; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent-lime); box-shadow: 0 0 0 3px rgba(210, 248, 120, .08); }
+@media (max-width: 600px) {
+  .portfolio-inner { width: calc(100% - 32px); }
+  .hero-section { padding: 58px 0 44px; }
+  .content-section { padding-top: 72px; }
+  .contact-section { padding-top: 86px; }
+}
+
+/* Observatory theme: a distinct violet/cyan command interface with restrained motion. */
+:root { --background: oklch(0.055 0.018 285); --foreground: oklch(0.94 0.018 280); --border: oklch(0.25 0.045 285); --ring: oklch(0.78 0.16 205); --muted-foreground: oklch(0.62 0.035 280); --accent-lime: #b7f6e8; --accent-soft: #9c8cff; --panel: #100d1c; }
+.portfolio-shell { background: #07060d; background-image: radial-gradient(circle at 75% 12%, rgba(105, 76, 220, .13), transparent 28%), radial-gradient(circle at 18% 78%, rgba(39, 184, 209, .06), transparent 30%); }
+.ambient-background { background: radial-gradient(ellipse at 76% 22%, rgba(121, 83, 255, .12), transparent 32%), #07060d; }
+.ambient-grid { opacity: .22; background-image: linear-gradient(rgba(155, 140, 255, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(155, 140, 255, .1) 1px, transparent 1px); background-size: 88px 88px; animation: grid-drift 26s linear infinite; }
+.network-lines { opacity: .2; background: linear-gradient(118deg, transparent 13%, rgba(111, 224, 237, .8) 13.08%, transparent 13.18% 34%, rgba(164, 129, 255, .65) 34.1%, transparent 34.2% 70%, rgba(111, 224, 237, .55) 70.1%, transparent 70.2%), linear-gradient(27deg, transparent 23%, rgba(111, 224, 237, .45) 23.08%, transparent 23.16% 57%, rgba(164, 129, 255, .4) 57.08%, transparent 57.18%); animation: network-breathe 9s ease-in-out infinite; }
+.network-lines::before { background: #79e8f1; box-shadow: 0 0 18px 4px rgba(79, 218, 235, .65); animation: node-pulse 2.8s ease-in-out infinite; }
+.network-lines::after { background: #b296ff; box-shadow: 0 0 18px 4px rgba(153, 119, 255, .55); animation: node-pulse 3.3s ease-in-out infinite reverse; }
+.atmospheric-glow-cyan { background: #28c9e0; opacity: .1; animation: glow-float 12s ease-in-out infinite alternate; }
+.atmospheric-glow-lime { background: #8b6cff; opacity: .08; animation: glow-float 16s ease-in-out infinite alternate-reverse; }
+.ambient-particles { opacity: .3; background-image: radial-gradient(circle at 18% 32%, rgba(183, 246, 232, .7) 0 1px, transparent 1.5px), radial-gradient(circle at 78% 18%, rgba(178, 150, 255, .6) 0 1px, transparent 1.5px), radial-gradient(circle at 64% 71%, rgba(183, 246, 232, .45) 0 1px, transparent 1.5px); animation: particle-drift 20s ease-in-out infinite alternate; }
+.ambient-scanlines { opacity: .035; background: repeating-linear-gradient(0deg, transparent 0, transparent 5px, rgba(176, 235, 255, .6) 6px); }
+.site-header { border-bottom-color: rgba(164, 129, 255, .22); }
+.wordmark span, .desktop-nav a:hover, .desktop-nav .active, .header-actions a:hover, .theme-toggle:hover { color: #b296ff; }
+.status-indicator { color: #8ef2e2; }.status-indicator i { background: #8ef2e2; box-shadow: 0 0 12px #8ef2e2; }
+.eyebrow span, h1 em, .section-heading-row h2::first-letter, .contact-section h2 em { color: #8ef2e2; }
+.eyebrow, .section-kicker, .strip-label { color: #a99bdb; }
+h1 { text-shadow: 0 0 42px rgba(139, 110, 255, .15); animation: title-arrive .9s cubic-bezier(.2,.8,.2,1) both; }
+.button { border-radius: 4px; }.button-primary { background: #8ef2e2; border-color: #8ef2e2; color: #081313; box-shadow: 0 0 24px rgba(142, 242, 226, .12); }.button-primary:hover { background: #c2fff4; box-shadow: 0 0 32px rgba(142, 242, 226, .28); }.button-ghost { border-color: #403765; background: rgba(20, 15, 35, .5); }.button-ghost:hover { border-color: #b296ff; color: #b296ff; }
+.terminal-window, .system-status, .about-terminal, .skill-card, .project-card, .tools-panel, .resume-terminal, .contact-form { background: rgba(13, 10, 24, .78); border-color: rgba(164, 129, 255, .25); backdrop-filter: blur(12px); }.terminal-window, .resume-terminal { box-shadow: 0 24px 80px rgba(0, 0, 0, .4), 0 0 34px rgba(121, 83, 255, .1); animation: panel-rise .9s .1s both; }.terminal-header, .system-status-heading, .resume-top { border-bottom-color: rgba(164, 129, 255, .2); }.tech-strip, .section-heading-row, .portfolio-footer { border-color: rgba(164, 129, 255, .2); }.content-section { padding-top: 104px; }
+.skill-card, .project-card { transition: border-color .35s, background .35s, transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .35s; }.skill-card:hover, .project-card:hover { border-color: rgba(142, 242, 226, .6); background: rgba(24, 17, 43, .86); box-shadow: 0 20px 44px rgba(0, 0, 0, .28), 0 0 28px rgba(142, 242, 226, .06); transform: translateY(-6px); }.project-primary { box-shadow: inset 3px 0 0 #8ef2e2, inset 0 0 50px rgba(142, 242, 226, .035); }.project-tech span, .education-tags span { border-color: rgba(142, 242, 226, .26); background: rgba(142, 242, 226, .045); }.contact-form input, .contact-form textarea { background: #0b0914; border-color: rgba(164, 129, 255, .24); }.contact-form input:focus, .contact-form textarea:focus { border-color: #8ef2e2; box-shadow: 0 0 0 3px rgba(142, 242, 226, .1); }
+@keyframes grid-drift { to { transform: perspective(850px) rotateX(2deg) translate3d(44px, 44px, 0); } } @keyframes network-breathe { 50% { opacity: .42; transform: translateX(8px); } } @keyframes node-pulse { 50% { transform: scale(1.8); opacity: .5; } } @keyframes glow-float { 50% { transform: translate3d(-4vw, 3vh, 0) scale(1.1); } } @keyframes title-arrive { from { opacity: 0; transform: translateY(20px); letter-spacing: -.04em; } to { opacity: 1; transform: translateY(0); } } @keyframes panel-rise { from { opacity: 0; transform: translateY(18px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
+/* Deep Hack Theme: High-contrast neon green on absolute black */
+.deep-hack-theme {
+  --background: #000000;
+  --foreground: #00FF41;
+  --border: #003B00;
+  --ring: #00FF41;
+  --muted-foreground: #008F11;
+  --accent-lime: #00FF41;
+  --accent-soft: #008F11;
+  --panel: #000000;
+}
+
+.deep-hack-theme .portfolio-shell {
+  background: #000000;
+  background-image: linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.deep-hack-theme .terminal-window,
+.deep-hack-theme .system-status,
+.deep-hack-theme .about-terminal,
+.deep-hack-theme .skill-card,
+.deep-hack-theme .project-card,
+.deep-hack-theme .tools-panel,
+.deep-hack-theme .resume-terminal,
+.deep-hack-theme .contact-form {
+  background: rgba(0, 20, 0, 0.9);
+  border-color: #00FF41;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.deep-hack-theme h1, .deep-hack-theme .wordmark {
+  color: #00FF41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.deep-hack-theme .button-primary {
+  background: #00FF41;
+  color: #000;
+  border-color: #00FF41;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
