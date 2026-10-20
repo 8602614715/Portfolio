@@ -3,7 +3,6 @@
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, ChevronRight, Copy, GitBranch, Mail, UsersRound, Minus, ScanLine, ShieldCheck, Square, Terminal, Wifi } from 'lucide-react'
-import { ScrambleText } from './scramble-text'
 
 type CommandKey = 'help' | 'about' | 'skills' | 'projects' | 'experience' | 'contact' | 'clear'
 
@@ -62,8 +61,6 @@ export function TerminalPortfolio() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#070b0d] text-[#dce7e4] selection:bg-[#b4f34a]/20 selection:text-[#dfff9d]">
-      <div className="crt-overlay" />
-      <div className="crt-vignette" />
       <div className="pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(180,243,74,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(180,243,74,0.03)_1px,transparent_1px)] bg-[size:42px_42px]" />
       <div className="pointer-events-none fixed inset-0 opacity-[0.045] [background-image:repeating-linear-gradient(0deg,transparent,transparent_3px,#b4f34a_4px)]" />
 
@@ -77,11 +74,7 @@ export function TerminalPortfolio() {
         <section className="grid flex-1 gap-8 py-10 lg:grid-cols-[minmax(260px,0.72fr)_minmax(560px,1.65fr)] lg:items-center lg:gap-16 lg:py-16">
           <div className="max-w-xl">
             <p className="mb-5 font-mono text-xs uppercase tracking-[0.3em] text-[#73d6d1]">[ identity verified ]</p>
-            <h1 className="max-w-3xl font-mono text-[clamp(3rem,7vw,7.2rem)] font-medium leading-[0.88] tracking-[-0.08em] text-[#eff8f5] glitch-text">
-              <ScrambleText text="SATYAM" />
-              <br />
-              <ScrambleText text="PRAJAPATI" delay={0.2} className="text-[#b4f34a]" />
-            </h1>
+            <h1 className="max-w-3xl font-mono text-[clamp(3rem,7vw,7.2rem)] font-medium leading-[0.88] tracking-[-0.08em] text-[#eff8f5]">SATYAM<br /><span className="text-[#b4f34a]">PRAJAPATI</span></h1>
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-sm text-[#9db2ad]"><span className="text-[#dce7e4]">Cybersecurity Engineer</span><span className="text-[#38514b]">/</span><span>Backend Developer</span></div>
             <p className="mt-8 max-w-md border-l border-[#b4f34a] pl-4 text-sm leading-7 text-[#829b94]">Building secure, observable systems for the real world. I turn complex attack surfaces into clear, resilient architecture.</p>
             <div className="mt-10 flex flex-wrap gap-3 font-mono text-xs">
